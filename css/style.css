@@ -1,0 +1,987 @@
+/* =========================================
+   Base Styles (from HomePage.css)
+   ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2C2C2C;
+    background-color: #FAF9F7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utilities */
+.highlight {
+    font-weight: bold;
+}
+
+.text-gray {
+    color: #6B6B6B;
+}
+
+.white {
+    color: white;
+}
+
+.white-70 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-light-gray {
+    background-color: #F5F3F0;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-muted {
+    color: #6B6B6B !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.space-y-8>*+* {
+    margin-top: 2rem;
+}
+
+.space-y-4>*+* {
+    margin-top: 1rem;
+}
+
+.space-y-3>*+* {
+    margin-top: 0.75rem;
+}
+
+/* Navigation */
+.main-nav {
+    border-bottom: 1px solid #E8E4DE;
+    background-color: #FAF9F7;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 24px;
+    /* Unified size */
+    font-weight: bold;
+    color: #2C2C2C;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a:hover {
+    color: #6B7B5E;
+}
+
+.active {
+    font-weight: bold;
+    border-bottom: 2px solid #2C2C2C;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background-color: #2C2C2C;
+    color: white;
+    border: 1px solid #2C2C2C;
+    margin-left: 10px;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: #2C2C2C;
+    border: 1px solid #2C2C2C;
+}
+
+.btn-white {
+    background-color: white;
+    color: #2C2C2C;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-dark {
+    background-color: #2C2C2C;
+    border: none;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #1a1a1a;
+}
+
+/* Hero Section */
+.hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1 1 400px;
+}
+
+.hero-image-wrapper {
+    flex: 1 1 300px;
+    position: relative;
+}
+
+.main-hero-img {
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slogan {
+    color: #6B7B5E;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Stats */
+.stats-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6B6B6B;
+    margin: 0;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #E0E0E0;
+    align-self: center;
+}
+
+/* Catalog / Grid System */
+.grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.centered-grid {
+    justify-content: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.category-item {
+    flex: 1 1 200px;
+    text-align: center;
+    max-width: 230px;
+    /* Prevent single item from stretching too much */
+}
+
+.category-img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.item-count {
+    font-size: 12px;
+    color: #6B6B6B;
+    margin: 0;
+}
+
+.feature-item {
+    flex: 1 1 200px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 32px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.max-w-500 {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Steps */
+.step-item {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.step-number {
+    font-size: 36px;
+    color: #C4D4C0;
+}
+
+/* Badges */
+.floating-badge-container {
+    text-align: right;
+    margin-top: -30px;
+    padding-right: 30px;
+}
+
+.left-side {
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.floating-badge {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-badge {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.badge-subtext {
+    font-size: 12px;
+    margin: 0;
+    color: #6B6B6B;
+}
+
+.badge-condition {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-sale {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.badge-discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #2C2C2C;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.badge-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 50px 0;
+    background-color: #2C2C2C;
+    color: white;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Footer */
+.main-footer {
+    padding: 50px 0;
+    background-color: #FAF9F7;
+    border-top: 1px solid #E8E4DE;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-align: right;
+    /* Ensure RTL alignment */
+    direction: rtl;
+}
+
+/* Force container to match custom non-Bootstrap style */
+.main-footer .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    width: auto !important;
+    /* Reset Bootstrap specific widths */
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2C2C2C;
+    line-height: normal;
+    /* Reset Bootstrap */
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #6B6B6B;
+    font-weight: normal;
+    /* Reset Bootstrap */
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #2C2C2C;
+    line-height: 1.2;
+    /* Reset Bootstrap */
+}
+
+.footer-list {
+    color: #6B6B6B;
+    list-style: none;
+    /* Reset Bootstrap */
+    padding: 0 !important;
+    /* Reset Bootstrap padding-right */
+    margin: 0 !important;
+}
+
+.footer-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: none;
+    /* Reset table/list borders if any */
+    padding: 0;
+}
+
+.footer-list a {
+    color: #6B6B6B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: transparent;
+    /* Reset Bootstrap */
+}
+
+.footer-list a:hover {
+    color: #2C2C2C;
+    text-decoration: none;
+    /* Ensure no underline on hover if homepage has none */
+}
+
+.footer-bottom {
+    border-top: 1px solid #E8E4DE;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #6B6B6B;
+    font-size: 14px;
+}
+
+/* =========================================
+   About Page Styles (from about.css)
+   ========================================= */
+.about-hero {
+    background-color: #FAF9F7;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.centered-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-subtitle {
+    font-size: 20px;
+    color: #6B6B6B;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bg-dark {
+    background-color: #2C2C2C;
+    color: white;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.stat-box p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.story-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: #6B6B6B;
+}
+
+.contact-form {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2C2C2C;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* =========================================
+   Catalog Page Styles (from catalog.css)
+   ========================================= */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.card-img-hover {
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .card-img-hover {
+    transform: scale(1.08);
+}
+
+.aspect-\[3\/4\] {
+    aspect-ratio: 3 / 4;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #E8E4DE;
+    padding: 0.5rem 1rem;
+}
+
+.product-card:hover .hover-actions {
+    opacity: 1 !important;
+}
+
+/* =========================================
+   Product Details Styles (from productdetails.css)
+   ========================================= */
+.product-card-restyle {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card-img-restyle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card-restyle:hover .card-img-restyle {
+    transform: scale(1.1);
+}
+
+.hover-overlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card-restyle:hover .hover-overlay {
+    opacity: 1;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+    background: #e5e7eb;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.custom-range::-webkit-slider-thumb {
+    background: #2C2C2C;
+    margin-top: -5px;
+}
+
+/* =========================================
+   Upload Product Styles (from uploadproduct.css)
+   ========================================= */
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+.max-w-760 {
+    max-width: 760px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 2px rgba(107, 123, 94, 0.2);
+    border-color: #6B7B5E;
+}
+
+.upload-area {
+    transition: all 0.2s ease;
+    background-color: transparent;
+    border: 2px dashed #C4D4C0;
+    border-radius: 0.75rem;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-area:hover {
+    border-color: #6B7B5E !important;
+    background-color: rgba(196, 212, 192, 0.1);
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-entry {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Tooltip Style */
+.custom-tooltip {
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* New Product Card Styles (Tailwind-like Utility Classes) */
+.group {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.group:hover {
+    color: inherit;
+}
+
+.aspect-\[3\/4\] {
+    aspect-ratio: 3 / 4;
+    position: relative;
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+.bg-\[\#2C2C2C\] {
+    background-color: #2C2C2C;
+}
+
+.bg-purple-100 {
+    background-color: #f3e8ff;
+}
+
+.text-purple-800 {
+    color: #6b21a8;
+}
+
+.bg-black\/0 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.group:hover .group-hover\:bg-black\/10 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.hover\:bg-\[\#F5F3F0\]:hover {
+    background-color: #F5F3F0;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.group:hover .group-hover\:text-\[\#6B7B5E\] {
+    color: #6B7B5E;
+}
+
+/* Fix for buttons inside link */
+.group button {
+    pointer-events: auto;
+    /* Ensure buttons are clickable */
+    position: relative;
+    z-index: 10;
+}
+
+.group a {
+    display: block;
+    /* Ensure the main link covers the card area but buttons are above */
+}
+
+/* Positioning Utilities */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.top-4 {
+    top: 1rem;
+}
+
+.left-4 {
+    left: 1rem;
+}
+
+.right-4 {
+    right: 1rem;
+}
+
+.bottom-4 {
+    bottom: 1rem;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+/* Overlay Utilities */
+.bg-black\/60 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+/* Refactored Inline Styles */
+.sticky-sidebar {
+    top: 2rem;
+    z-index: 1;
+}
+
+.init-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.badge-new {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-good {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.uc-image {
+    max-height: 300px;
+}

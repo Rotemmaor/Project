@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReStyle | העלאת מוצר חדש</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-[#FAF9F7]">
+
+    <header>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <div class="logo">ReStyle</div>
+                <div class="nav-links">
+                    <a href="../index.html">בית</a>
+                    <a href="catalog.html">קטגוריות</a>
+                    <a href="about.html">למה אצלנו</a>
+                    <a href="#">איך זה עובד</a>
+                    <a href="about.html#contact">צור קשר</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <section class="container max-w-4xl mx-auto px-4">
+            <div class="mb-5">
+                <button onclick="window.location.href='../index.html'"
+                    class="btn btn-link text-decoration-none text-dark p-0 mb-4 d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" class="ms-2">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                    חזרה
+                </button>
+                <div class="d-flex align-items-center gap-4">
+                    <div class="w-14 h-14 bg-[#C4D4C0]/30 rounded-2xl d-flex align-items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="#6B7B5E" stroke-width="2">
+                            <path
+                                d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z">
+                            </path>
+                            <path d="M12 22V12"></path>
+                            <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-light text-[#2C2C2C] m-0">העלאת מוצר חדש</h1>
+                        <p class="text-[#6B6B6B] mt-1">מלאי את הפרטים והעלי תמונות איכותיות</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="process_upload.php" method="POST" enctype="multipart/form-data"
+                class="bg-white rounded-4 p-4 p-md-5 space-y-8 shadow-sm">
+                <fieldset class="space-y-3">
+                    <legend class="text-base font-medium text-[#2C2C2C] w-100 mb-2">תמונות המוצר <span
+                            class="text-danger">*</span></legend>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                            <label
+                                class="upload-area aspect-square rounded-xl border-2 border-dashed border-[#C4D4C0] d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                <input type="file" name="image" accept="image/*" class="d-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="#6B7B5E" stroke-width="2" class="mb-2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" x2="12" y1="3" y2="15" />
+                                </svg>
+                                <span class="small text-[#6B6B6B]">העלה תמונה</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="small text-[#6B6B6B] mt-2">העלאה של עד 5 תמונות • התמונה הראשונה תהיה התמונה הראשית</p>
+                </fieldset>
+
+                <fieldset class="space-y-4">
+                    <legend class="visually-hidden">פרטים בסיסיים</legend>
+                    <div class="space-y-3">
+                        <label class="font-medium text-[#2C2C2C]">כותרת <span class="text-danger">*</span></label>
+                        <input type="text" name="title" class="form-control rounded-3 py-2"
+                            placeholder="לדוגמה: שמלת ערב שחורה מעוצבת" required>
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="font-medium text-[#2C2C2C]">תיאור <span class="text-danger">*</span></label>
+                        <textarea name="description" class="form-control rounded-3" rows="5"
+                            placeholder="תארי את הפריט בפירוט..." required></textarea>
+                        <p class="small text-[#6B6B6B]">0 / 20 תווים מינימום</p>
+                    </div>
+                </fieldset>
+
+                <fieldset class="row g-4">
+                    <legend class="visually-hidden">מחיר</legend>
+                    <div class="col-md-6">
+                        <label class="font-medium text-[#2C2C2C]">מחיר <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="number" name="price" id="currentPrice" class="form-control rounded-start-3"
+                                placeholder="0" required>
+                            <span class="input-group-text bg-transparent border-end-0">₪</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="font-medium text-[#2C2C2C]">מחיר מקורי (אופציונלי)</label>
+                        <div class="input-group">
+                            <input type="number" name="original_price" id="originalPrice"
+                                class="form-control rounded-start-3" placeholder="0">
+                            <span class="input-group-text bg-transparent border-end-0">₪</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="row g-4">
+                    <legend class="visually-hidden">מאפיינים</legend>
+                    <div class="col-md-6">
+                        <label class="font-medium text-[#2C2C2C]">קטגוריה <span class="text-danger">*</span></label>
+                        <select name="category" class="form-select rounded-3" required>
+                            <option value="" disabled selected>בחרי קטגוריה</option>
+                            <option>שמלות</option>
+                            <option>חולצות</option>
+                            <option>מכנסיים</option>
+                            <option>חצאיות</option>
+                            <option>מעילים</option>
+                            <option>נעליים</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="font-medium text-[#2C2C2C]">מצב הפריט <span class="text-danger">*</span></label>
+                        <select name="item_condition" class="form-select rounded-3" required>
+                            <option value="" disabled selected>בחרי מצב</option>
+                            <option>חדש עם תגית</option>
+                            <option>כמו חדש</option>
+                            <option>מצב מעולה</option>
+                            <option>מצב טוב</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="font-medium text-[#2C2C2C]">מידה</label>
+                            <select name="size" class="form-select rounded-3">
+                                <option value="" selected>בחרי מידה</option>
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>Free Size</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="font-medium text-[#2C2C2C]">מותג</label>
+                            <input type="text" name="brand" class="form-control rounded-3"
+                                placeholder="לדוגמה: Zara, H&M" pattern="[a-zA-Z\u0590-\u05FF\s]+"
+                                title="שם המותג חייב להכיל אותיות בלבד">
+                        </div>
+                        <div class="col-12">
+                            <label class="font-medium text-[#2C2C2C]">צבע</label>
+                            <input type="text" name="color" class="form-control rounded-3"
+                                placeholder="לדוגמה: שחור, לבן, כחול">
+                        </div>
+                </fieldset>
+
+                <div class="d-flex gap-3 pt-4">
+                    <button type="submit" class="btn btn-dark rounded-pill py-3 flex-grow-1">פרסם מוצר</button>
+                    <button type="button" onclick="window.location.href='../index.html'"
+                        class="btn btn-outline-dark rounded-pill py-3 px-5">ביטול</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="grid-section footer-top">
+                <div class="footer-column">
+                    <h3 class="footer-logo">ReStyle</h3>
+                    <p class="text-gray">הפלטפורמה לאופנה מחודשת. קונות, מוכרות, שומרות על הסביבה.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="highlight m-0">קישורים</h4>
+                    <ul class="footer-list">
+                        <li><a href="about.html">אודות</a></li>
+                        <li><a href="#">איך זה עובד</a></li>
+                        <li><a href="#">בלוג</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="highlight m-0">עזרה</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">שאלות נפוצות</a></li>
+                        <li><a href="about.html#contact">צור קשר</a></li>
+                        <li><a href="#">מדיניות החזרות</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="highlight m-0">עקבו אחרינו</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">אינסטגרם</a></li>
+                        <li><a href="#">פייסבוק</a></li>
+                        <li><a href="#">טיקטוק</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 ReStyle. כל הזכויות שמורות.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

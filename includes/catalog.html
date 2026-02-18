@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReStyle | הקולקציה שלנו</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-[#FAF9F7]">
+
+  <header>
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <div class="logo">ReStyle</div>
+        <div class="nav-links">
+          <a href="../index.html">בית</a>
+          <a href="catalog.html" class="active">קטגוריות</a>
+          <a href="about.html">למה אצלנו</a>
+          <a href="#">איך זה עובד</a>
+          <a href="about.html#contact">צור קשר</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-white border-bottom py-5">
+      <div class="container">
+        <h1 class="display-5 fw-light text-[#2C2C2C] mb-2">הקולקציה שלנו</h1>
+        <p class="text-[#6B6B6B] mb-0">8 פריטים זמינים</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar Filters -->
+        <aside class="col-lg-3 d-none d-lg-block">
+          <form class="bg-white rounded-4 p-4 shadow-sm sticky-top sticky-sidebar">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="h5 fw-medium m-0">סינון</h3>
+            </div>
+
+            <div class="mb-4">
+              <label for="product-search" class="form-label fw-medium mb-2">חיפוש חופשי</label>
+              <input type="text" class="form-control" id="product-search" placeholder="הקלידי שם פריט  ...">
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-medium mb-3">קטגוריה</label>
+              <div class="d-flex flex-column gap-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-dresses">
+                  <label class="form-check-label text-muted" for="cat-dresses">שמלות</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-shirts">
+                  <label class="form-check-label text-muted" for="cat-shirts">חולצות</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-pants">
+                  <label class="form-check-label text-muted" for="cat-pants">מכנסיים</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-skirts">
+                  <label class="form-check-label text-muted" for="cat-skirts">חצאיות</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-coats">
+                  <label class="form-check-label text-muted" for="cat-coats">מעילים</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-shoes">
+                  <label class="form-check-label text-muted" for="cat-shoes">נעליים</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-bags">
+                  <label class="form-check-label text-muted" for="cat-bags">תיקים</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cat-accessories">
+                  <label class="form-check-label text-muted" for="cat-accessories">אקססוריז</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-medium mb-3">מצב הפריט</label>
+              <div class="d-flex flex-column gap-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cond-new">
+                  <label class="form-check-label text-muted" for="cond-new">חדש עם תגית</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cond-like-new">
+                  <label class="form-check-label text-muted" for="cond-like-new">כמו חדש</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cond-excellent">
+                  <label class="form-check-label text-muted" for="cond-excellent">מצב מעולה</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="cond-good">
+                  <label class="form-check-label text-muted" for="cond-good">מצב טוב</label>
+                </div>
+              </div>
+            </div>
+
+
+          </form>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="col-lg-9">
+          <div class="row g-4">
+            <!-- Product 1: Blue Jeans -->
+            <div class="col-md-6 col-xl-4" data-category="pants" data-condition="excellent">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=ג'ינס כחול גזרה גבוהה&price=120&originalPrice=299&img=../images/photo-1541099649105-f69ad21f3246.jpg&brand=Levi's&size=S">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1541099649105-f69ad21f3246.jpg" alt="ג'ינס כחול גזרה גבוהה"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -60%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-purple-100 text-purple-800 badge">
+                      מצב מעולה</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        ג'ינס כחול גזרה גבוהה</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Levi's</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪120</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪299</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: S</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 2: White Silk Shirt -->
+            <div class="col-md-6 col-xl-4" data-category="shirts" data-condition="new">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=חולצת משי לבנה מעודנת&price=180&originalPrice=450&img=../images/photo-1562157873-818bc0726f68.jpg&brand=Mango&size=M">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1562157873-818bc0726f68.jpg" alt="חולצת משי לבנה מעודנת"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -60%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-green-100 text-green-800 badge badge-new">
+                      חדש עם תגית</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        חולצת משי לבנה מעודנת</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Mango</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪180</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪450</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: M</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 3: Oversize Denim Jacket -->
+            <div class="col-md-6 col-xl-4" data-category="coats" data-condition="excellent">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=מעיל ג'ינס אוברסייז&price=200&originalPrice=499&img=../images/photo-1551028719-00167b16eac5.jpg&brand=H&M&size=L">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1551028719-00167b16eac5.jpg" alt="מעיל ג'ינס אוברסייז"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -60%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-purple-100 text-purple-800 badge">
+                      מצב מעולה</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        מעיל ג'ינס אוברסייז</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">H&M</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪200</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪499</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: L</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 4: Black Leather Heels -->
+            <div class="col-md-6 col-xl-4" data-category="shoes" data-condition="like-new">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=נעלי עקב&price=250&originalPrice=599&img=../images/photo-1543163521-1bf539c55dd2.jpg&brand=Aldo&size=38">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1543163521-1bf539c55dd2.jpg" alt="נעלי עקב"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -58%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-blue-100 text-blue-800 badge">
+                      כמו חדש</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        נעלי עקב</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Aldo</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪250</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪599</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: 38</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 5: Fancy Leather Handbag -->
+            <div class="col-md-6 col-xl-4" data-category="bags" data-condition="excellent">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=תיק יד עור מהודר&price=320&originalPrice=790&img=../images/photo-1584917865442-de89df76afd3.jpg&brand=Michael Kors&size=Free Size">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1584917865442-de89df76afd3.jpg" alt="תיק יד עור מהודר"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -59%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-purple-100 text-purple-800 badge">
+                      מצב מעולה</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        תיק יד עור מהודר</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Michael Kors</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪320</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪790</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: Free Size</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 6: Floral Summer Dress -->
+            <div class="col-md-6 col-xl-4" data-category="dresses" data-condition="good">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=שמלת קיץ אדומה&price=140&originalPrice=349&img=../images/photo-1595777457583-95e059d581b8.jpg&brand=Mango&size=S">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1595777457583-95e059d581b8.jpg" alt="שמלת קיץ אדומה"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -60%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-gray-100 text-gray-800 badge badge-good">
+                      מצב טוב</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        שמלת קיץ אדומה</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Mango</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪140</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪349</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: S</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 7: White Sneakers -->
+            <div class="col-md-6 col-xl-4" data-category="shoes" data-condition="like-new">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=סניקרס לבנים&price=180&originalPrice=399&img=../images/photo-1600185365483-26d7a4cc7519.jpeg&brand=Nike&size=37">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1600185365483-26d7a4cc7519.jpeg" alt="סניקרס לבנים"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -55%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-blue-100 text-blue-800 badge">
+                      כמו חדש</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        סניקרס לבנים</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Nike</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪180</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪399</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: 37</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 8: Black Evening Dress -->
+            <div class="col-md-6 col-xl-4" data-category="dresses" data-condition="like-new">
+              <div class="group init-visible">
+                <a
+                  href="productdetails.html?title=שמלת ערב מעוצבת&price=350&originalPrice=890&img=../images/photo-1566174053879-31528523f8ae.jpeg&brand=Zara&size=M">
+                  <div class="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-100 mb-4 product-card">
+                    <img src="../images/photo-1566174053879-31528523f8ae.jpeg" alt="שמלת ערב מעוצבת"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                      class="absolute top-4 left-4 bg-[#2C2C2C] text-white px-3 py-1.5 rounded-full text-sm font-medium badge">
+                      -61%</div>
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent shadow hover:bg-primary/80 absolute top-4 right-4 bg-blue-100 text-blue-800 badge">
+                      כמו חדש</div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                    </div>
+                    <div
+                      class="absolute bottom-4 right-4 left-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button
+                        class="flex-1 bg-white text-[#2C2C2C] py-2.5 rounded-xl font-medium hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4 inline-block ml-2 mb-0">
+                          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                          <path d="M3 6h18"></path>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        הוסף לעגלה
+                      </button>
+                      <button
+                        class="bg-white text-[#2C2C2C] p-2.5 rounded-xl hover:bg-[#F5F3F0] transition-colors d-flex justify-content-center align-items-center"
+                        title="תכונה זו לא מומשה עדיין">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-heart w-4 h-4 mb-0">
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="d-flex items-start justify-content-between gap-2">
+                      <h3
+                        class="h6 font-medium text-[#2C2C2C] group-hover:text-[#6B7B5E] transition-colors line-clamp-1 mb-0">
+                        שמלת ערב מעוצבת</h3>
+                      <span class="small text-sm text-[#6B6B6B] whitespace-nowrap">Zara</span>
+                    </div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="text-lg font-semibold text-[#2C2C2C] fw-bold">₪350</span>
+                      <span
+                        class="text-sm text-[#6B6B6B] line-through text-muted small text-decoration-line-through">₪890</span>
+                    </div>
+                    <span class="text-sm text-[#6B6B6B] small text-muted">מידה: M</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination (Optional - static for now) -->
+
+
+      </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="grid-section footer-top">
+        <div class="footer-column">
+          <h3 class="footer-logo">ReStyle</h3>
+          <p class="text-gray">הפלטפורמה לאופנה מחודשת. קונות, מוכרות, שומרות על הסביבה.</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="highlight m-0">קישורים</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="#">איך זה עובד</a></li>
+            <li><a href="#">בלוג</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="highlight m-0">עזרה</h4>
+          <ul class="footer-list">
+            <li><a href="#">שאלות נפוצות</a></li>
+            <li><a href="about.html#contact">צור קשר</a></li>
+            <li><a href="#">מדיניות החזרות</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="highlight m-0">עקבו אחרינו</h4>
+          <ul class="footer-list">
+            <li><a href="#">אינסטגרם</a></li>
+            <li><a href="#">פייסבוק</a></li>
+            <li><a href="#">טיקטוק</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2024 ReStyle. כל הזכויות שמורות.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
